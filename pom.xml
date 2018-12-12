@@ -13,6 +13,7 @@
         <module>AOP-tryouts</module>
         <module>prospring4-book-tryouts</module>
         <module>IoC-Tryouts</module>
+        <module>spring-DB</module>
     </modules>
 
     <properties>
