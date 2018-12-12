@@ -18,7 +18,6 @@
       <module name="prospring4-book-tryouts" target="1.8" />
       <module name="Spring-swing-tryout" target="1.8" />
       <module name="Spring-Tryouts" target="1.8" />
-      <module name="spring-web-app" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
