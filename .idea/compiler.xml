@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="AOP-tryouts" />
+        <module name="IoC-Tryouts" />
+        <module name="prospring4-book-tryouts" />
+        <module name="Spring-swing-tryout" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="AOP-tryouts" target="1.8" />
+      <module name="IoC-Tryouts" target="1.8" />
+      <module name="prospring4-book-tryouts" target="1.8" />
+      <module name="Spring-swing-tryout" target="1.8" />
+      <module name="Spring-Tryouts" target="1.8" />
+      <module name="spring-web-app" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

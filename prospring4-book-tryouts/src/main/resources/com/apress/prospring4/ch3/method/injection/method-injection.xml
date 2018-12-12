@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="helper" class="com.apress.prospring4.ch3.method.injection.MyHelper" scope="prototype"/>
+
+    <bean id="standardBeen" class="com.apress.prospring4.ch3.method.injection.StandardLookupDemoBeen">
+        <property name="myHelper">
+            <ref bean="helper"/>
+        </property>
+    </bean>
+
+    <bean id="abstractBean" class="com.apress.prospring4.ch3.method.injection.AbstractLookupDemoBean">
+        <lookup-method name="getMyHelper" bean="helper"/>
+    </bean>
+
+</beans>

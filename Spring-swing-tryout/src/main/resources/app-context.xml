@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="mainFrame" class="todo.ui.MainFrame">
+        <property name="title" value="To Do List"/>
+        <property name="contentPane" ref="mainPanel"/>
+    </bean>
+
+    <bean id="mainPanel" class="todo.ui.BoxLayoutPanel">
+        <property name="axis" value="1"/>
+        <property name="panelComponents">
+            <list>
+                <ref bean="itemScrollPane"/>
+                <ref bean="buttonPanel"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="itemScrollPane" class="javax.swing.JScrollPane">
+        <constructor-arg ref="itemTable"/>
+    </bean>
+
+    <bean class="javax.swing.JTable" id="itemTable">
+        <property name="model">
+            <ref bean="itemTableModel"/>
+        </property>
+    </bean>
+
+    <bean class="todo.ui.ItemTableModel" id="itemTableModel">
+        <property name="itemList" ref="itemList"/>
+    </bean>
+
+    <bean class="java.util.ArrayList" id="itemList">
+        <constructor-arg>
+            <list>
+                <value>Item 1</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean class="todo.ui.BoxLayoutPanel" id="buttonPanel">
+        <property name="axis" value="0"/>
+        <property name="panelComponents">
+            <list>
+                <ref bean="addNewButton"/>
+                <ref bean="deleteButton"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="addNewButton" class="todo.ui.button.ActionListenerButton">
+        <property name="actionListener" ref="addNewButtonActionListener"/>
+        <property name="text" value="add new"/>
+    </bean>
+
+    <bean id="deleteButton" class="todo.ui.button.ActionListenerButton">
+        <property name="actionListener" ref="deleteButtonActionListener"/>
+        <property name="text" value="delete"/>
+    </bean>
+
+    <bean class="todo.ui.button.DeleteButtonActionListener" id="deleteButtonActionListener">
+        <property name="list" ref="itemList"/>
+        <property name="table" ref="itemTable"/>
+    </bean>
+
+    <bean class="todo.ui.button.AddNewButtonActionListener" id="addNewButtonActionListener">
+        <property name="table" ref="itemTable"/>
+        <property name="list" ref="itemList"/>
+    </bean>
+
+</beans>
