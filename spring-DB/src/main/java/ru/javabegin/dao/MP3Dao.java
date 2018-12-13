@@ -1,6 +1,7 @@
 package ru.javabegin.dao;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author Vadym Mitin
@@ -10,7 +11,11 @@ public interface MP3Dao {
 
     void delete(MP3 mp3);
 
-    MP3 getMP3ById(int id);
+    <T> List<T> getMP3(String parameterName, Object parameterValue, Class<T> requiredType);
+
+    Map<String, Integer> getStatistic();
+
+    MP3 getMP3(int id);
 
     List<MP3> getMP3ListByName(String name);
 

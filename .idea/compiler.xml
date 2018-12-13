@@ -7,16 +7,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="AOP-tryouts" />
-        <module name="IoC-Tryouts" />
         <module name="prospring4-book-tryouts" />
+        <module name="Spring-core-tryouts" />
         <module name="spring-DB" />
         <module name="Spring-swing-tryout" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="AOP-tryouts" target="1.8" />
-      <module name="IoC-Tryouts" target="1.8" />
       <module name="prospring4-book-tryouts" target="1.8" />
+      <module name="Spring-core-tryouts" target="1.8" />
       <module name="spring-DB" target="1.8" />
       <module name="Spring-swing-tryout" target="1.8" />
       <module name="Spring-Tryouts" target="1.8" />

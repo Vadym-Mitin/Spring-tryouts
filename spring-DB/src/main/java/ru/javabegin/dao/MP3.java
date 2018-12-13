@@ -41,4 +41,13 @@ public class MP3 {
     public void setAuthor(String author) {
         this.author = author;
     }
+
+    @Override
+    public String toString() {
+        String mp3 = "id: " + id + "\n"
+                + "Author: " + author + "\n"
+                + "Name: " + name;
+
+        return mp3;
+    }
 }

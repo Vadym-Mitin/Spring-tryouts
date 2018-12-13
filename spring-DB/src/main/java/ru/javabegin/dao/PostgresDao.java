@@ -7,7 +7,9 @@ import org.springframework.stereotype.Component;
 
 import javax.sql.DataSource;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
+import java.util.TreeMap;
 
 /**
  * @author Vadym Mitin
@@ -41,7 +43,7 @@ public class PostgresDao implements MP3Dao {
     }
 
     @Override
-    public MP3 getMP3ById(int id) {
+    public MP3 getMP3(int id) {
 
         List<MP3> query = getMP3("id", id, MP3.class);
 
@@ -65,13 +67,29 @@ public class PostgresDao implements MP3Dao {
         return listOfMP3;
     }
 
-    private <T> List<T> getMP3(String parameterName, Object parameterValue, Class<T> requiredType) {
+    @Override
+    public <T> List<T> getMP3(String parameterName, Object parameterValue, Class<T> requiredType) {
         String preparedQery = "select * from mp3 where " + parameterName + "= ?";
         List<T> list = jdbcTemplate.query(preparedQery
                 , new Object[]{parameterValue}
                 , new BeanPropertyRowMapper<>(requiredType));
 
         return list;
-
     }
+
+    @Override
+    public Map<String, Integer> getStatistic() {
+        Map<String, Integer> query = jdbcTemplate.query("select author, count(*) as count from mp3 group by author"
+                , (resultSet) -> {
+                    Map<String, Integer> data = new TreeMap<>();
+                    while (resultSet.next()) {
+                        String author = resultSet.getString("author");
+                        int count = resultSet.getInt("count");
+                        data.put(author, count);
+                    }
+                    return data;
+                });
+        return query;
+    }
+
 }

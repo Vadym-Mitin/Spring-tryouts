@@ -3,8 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AOP-tryouts/AOP-tryouts.iml" filepath="$PROJECT_DIR$/AOP-tryouts/AOP-tryouts.iml" />
-      <module fileurl="file://$PROJECT_DIR$/IoC-Tryouts/IoC-Tryouts.iml" filepath="$PROJECT_DIR$/IoC-Tryouts/IoC-Tryouts.iml" />
       <module fileurl="file://$PROJECT_DIR$/Spring-Tryouts.iml" filepath="$PROJECT_DIR$/Spring-Tryouts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring-core-tryouts/Spring-core-tryouts.iml" filepath="$PROJECT_DIR$/Spring-core-tryouts/Spring-core-tryouts.iml" />
       <module fileurl="file://$PROJECT_DIR$/Spring-swing-tryout/Spring-swing-tryout.iml" filepath="$PROJECT_DIR$/Spring-swing-tryout/Spring-swing-tryout.iml" />
       <module fileurl="file://$PROJECT_DIR$/prospring4-book-tryouts/prospring4-book-tryouts.iml" filepath="$PROJECT_DIR$/prospring4-book-tryouts/prospring4-book-tryouts.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-DB/spring-DB.iml" filepath="$PROJECT_DIR$/spring-DB/spring-DB.iml" />

@@ -12,7 +12,7 @@
         <module>Spring-swing-tryout</module>
         <module>AOP-tryouts</module>
         <module>prospring4-book-tryouts</module>
-        <module>IoC-Tryouts</module>
+        <module>Spring-core-tryouts</module>
         <module>spring-DB</module>
     </modules>
 
