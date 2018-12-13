@@ -10,11 +10,11 @@ public class Main {
     public static void main(String[] args) throws InterruptedException {
         ClassPathXmlApplicationContext con = new ClassPathXmlApplicationContext("jug.spring.ripper/context.xml");
 
-        while (true) {
-            Thread.sleep(500);
-            Quoter terminator = con.getBean("terminator", Quoter.class);
-            terminator.sayQuote();
-        }
+//        while (true) {
+//            Thread.sleep(500);
+//            Quoter terminator = con.getBean("terminator", Quoter.class);
+//            terminator.sayQuote();
+//        }
 
     }
 
