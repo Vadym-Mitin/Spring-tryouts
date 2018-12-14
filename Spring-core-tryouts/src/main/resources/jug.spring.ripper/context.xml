@@ -8,6 +8,8 @@
     <!--in order not to write all  postProcessors beans you need to use annotation:config -->
     <context:annotation-config/>
 
+    <bean class="jug.spring.ripper.DeprecationHandlerBeanFactoryPostProcessor"/>
+
     <bean class="jug.spring.ripper.PostProxyInvokerContextListener"/>
 
     <bean class="jug.spring.ripper.ProfilingHandlerBeanPostProcessor"/>

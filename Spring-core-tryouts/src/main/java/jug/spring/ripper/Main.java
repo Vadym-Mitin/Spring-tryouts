@@ -16,6 +16,8 @@ public class Main {
 //            terminator.sayQuote();
 //        }
 
+        con.getBean("terminator", Quoter.class).sayQuote();
+
     }
 
 }

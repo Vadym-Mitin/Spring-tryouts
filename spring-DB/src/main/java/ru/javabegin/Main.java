@@ -23,10 +23,10 @@ public class Main {
 //        postgresDao.insert(mp3);
         MP3 mp3ById = postgresDao.getMP3(3);
 
-        Map<String, Integer> statistic = postgresDao.getStatistic();
-        for (String s : statistic.keySet()) {
-            System.out.println(s + "  ;  " + statistic.get(s));
-        }
+//        Map<String, Integer> statistic = postgresDao.getStatistic();
+//        for (String s : statistic.keySet()) {
+//            System.out.println(s + "  ;  " + statistic.get(s));
+//        }
 //        postgresDao.delete(mp3ById);
 
 
