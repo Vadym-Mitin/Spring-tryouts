@@ -23,6 +23,10 @@ public interface MP3Dao {
 
     int getMP3Count();
 
+    Author getAuthor(String authorName);
+
+    List<Author> getAuthors(String authorName);
+
     Map<String, Integer> getStat();
 
 }
