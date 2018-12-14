@@ -7,16 +7,7 @@ public class MP3 {
 
     private int id;
     private String name;
-    private String author;
-
-    public MP3() {
-    }
-
-    public MP3(int id, String name, String author) {
-        this.id = id;
-        this.name = name;
-        this.author = author;
-    }
+    private Author author;
 
     public int getId() {
         return id;
@@ -34,18 +25,18 @@ public class MP3 {
         this.name = name;
     }
 
-    public String getAuthor() {
+    public Author getAuthor() {
         return author;
     }
 
-    public void setAuthor(String author) {
+    public void setAuthor(Author author) {
         this.author = author;
     }
 
     @Override
     public String toString() {
         String mp3 = "id: " + id + "\n"
-                + "Author: " + author + "\n"
+                + "Author: " + author.getName() + "\n"
                 + "Name: " + name;
 
         return mp3;

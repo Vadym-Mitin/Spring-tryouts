@@ -7,18 +7,22 @@ import java.util.Map;
  * @author Vadym Mitin
  */
 public interface MP3Dao {
-    void insert(MP3 mp3);
+    int insert(MP3 mp3);
+
+    int insertList(List<MP3> mp3List);
 
     void delete(MP3 mp3);
 
-    <T> List<T> getMP3(String parameterName, Object parameterValue, Class<T> requiredType);
+    void delete(int id);
 
-    Map<String, Integer> getStatistic();
-
-    MP3 getMP3(int id);
+    MP3 getMP3ByID(int id);
 
     List<MP3> getMP3ListByName(String name);
 
     List<MP3> getMP3ListByAuthor(String author);
+
+    int getMP3Count();
+
+    Map<String, Integer> getStat();
 
 }
