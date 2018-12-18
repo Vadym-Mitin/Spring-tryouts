@@ -11,11 +11,12 @@
 
     <artifactId>Spring-core-tryouts</artifactId>
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+
+        <!-- https://mvnrepository.com/artifact/cglib/cglib -->
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>4.3.21.RELEASE</version>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+            <version>3.2.5</version>
         </dependency>
 
     </dependencies>

@@ -1,9 +1,6 @@
 package jug.spring.screensaver;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,16 +9,11 @@ import java.util.Random;
 /**
  * @author Vadym Mitin
  */
-@Component
+//@Component
 //@Scope("singleton")
 public abstract class ColorFrame extends JFrame {
-
-//    private Color color;
-//
-//    @Autowired
-//    public void setColor(Color color) {
-//        this.color = color;
-//    }
+    @Autowired
+    WindowPainter painter;
 
     public ColorFrame() throws HeadlessException {
         setSize(300, 300);
@@ -32,10 +24,12 @@ public abstract class ColorFrame extends JFrame {
     public void showOnRandomPlace() {
         Random random = new Random();
         setLocation(random.nextInt(1600), random.nextInt(900));
-        getContentPane().setBackground(getColor());
+        getContentPane().setBackground(getPainter());
         repaint();
     }
 
-    protected abstract Color getColor();
+    protected abstract WindowPainter getPainter();
+
+//    protected abstract Color getColor();
 
 }

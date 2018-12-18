@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
  * @author Vadym Mitin
  */
 @Component
-public class CustomScopeRegisteryBeanFactoryPostProcessor implements BeanFactoryPostProcessor {
+public class CustomScopeRegisterBeanFactoryPostProcessor implements BeanFactoryPostProcessor {
     @Override
     public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
         beanFactory.registerScope("periodical", new PeriodicalScopeConfigurer());
